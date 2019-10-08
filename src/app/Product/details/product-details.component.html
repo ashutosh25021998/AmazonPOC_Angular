@@ -1,0 +1,63 @@
+
+<div>
+  &nbsp;&nbsp;
+  <div class="row">
+  <img src="{{products.image}}">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <table>
+      <tr>
+          <td> ProductName:</td>
+          <td>{{products.productItemName}}</td>
+      </tr>
+      <tr>
+          <td>Price:</td>
+         <td>${{products.price}} </td>
+      </tr>
+      <tr>
+          <td>Description: </td>
+          <td>{{products.description}}</td>
+      </tr>
+      <tr>
+          <td>SupplierName:</td>
+          <td>{{products.supplier?.supplierName}}</td>
+      </tr>
+      <tr>
+          <td>
+                <button *ngIf="admincheck()" type="button" class="btn btn-outline-success my-2 my-sm-0"
+                 [routerLink]="['/edit',products.productItemId]">Edit</button>
+          </td>
+          <td>
+                <input *ngIf="admincheck()" type="button" class="btn btn-success " 
+                (click)="ConfirmDelete(products.productItemId)" name="Delete" value="Delete">
+          </td>
+      </tr>
+
+  </table> 
+            </div>
+            <br>
+            
+      <button *ngIf="usercheck()" type="button" data-toggle="modal" data-target="#myModal" 
+      class="btn btn-outline-success my-2 my-sm-0" 
+      (click)="funcAdd(products.productItemId,products.OperatorId)"><i class="fas fa-shopping-cart"></i>ADD TO CART</button>
+
+      
+      <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                  </div>
+                  <div class="modal-body">
+                      <h3>Your Items Is added to the cart.<i class="fa fa-check fa-2x" aria-hidden="true"></i></h3>
+                      
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>  
+
+

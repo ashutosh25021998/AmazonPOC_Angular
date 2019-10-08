@@ -1,0 +1,81 @@
+body{
+    color: #fff;
+    background: #63738a;
+    font-family: 'Roboto', sans-serif;
+}
+ .form-control{
+    height: 40px;
+    box-shadow: none;
+    color: black;
+   
+}
+.form-control:focus{
+    border-color: blue;
+}
+.form-control, .btn{        
+    border-radius: 3px;
+    margin-bottom: 5%;
+}
+ .adminsignup-form{
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.adminsignup-form h2{
+    color: #636363;
+    margin: 0 0 15px;
+    position: relative;
+    text-align: center;
+}
+
+.adminsignup-form h2:before{
+    left: 0;
+}
+.adminsignup-form h2:after{
+    right: 0;
+}
+.adminsignup-form .hint-text{
+    color: #999;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.adminsignup-form form{
+    color: #999;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background: #f2f3f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.adminsignup-form .form-group{
+    margin-bottom: 20px;
+}
+.adminsignup-form input[type="checkbox"]{
+    margin-top: 3px;
+}
+.adminsignup-form .btn{        
+    font-size: 16px;
+    font-weight: bold;		
+    min-width: 140px;
+    outline: none !important;
+}
+.adminsignup-form .row div:first-child{
+    padding-right: 10px;
+}
+.adminsignup-form .row div:last-child{
+    padding-left: 10px;
+}    	
+.adminsignup-form a{
+    color: blue;
+    text-decoration: underline;
+}
+.adminsignup-form a:hover{
+    text-decoration: none;
+}
+.adminsignup-form form a{
+    color: blue;
+    text-decoration: none;
+}	
+/* .adminsignup-form form a:hover{
+    text-decoration: underline;
+}  */

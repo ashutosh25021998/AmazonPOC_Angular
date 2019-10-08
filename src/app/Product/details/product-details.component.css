@@ -1,0 +1,26 @@
+.modal{
+color:white;
+
+}
+h3{   
+color: black;  
+}
+
+.fa {
+    color: black;
+}
+.btn-success{
+background-color: red;
+}
+.btn{margin-left: 230px;}
+img{
+    margin-left: 100px;
+    width: 450px;
+    height: 470px;
+}
+.fa-check{
+    color: green;
+}
+table{
+    font-weight: bold;
+}

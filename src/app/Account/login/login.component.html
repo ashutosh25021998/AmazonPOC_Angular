@@ -1,0 +1,36 @@
+
+   
+<div class="login-form"  >
+    
+    <form (ngSubmit) ="verifylogin(f)" #f=ngForm>
+   
+        <h2 class="text-center">Sign in with </h2>	
+       	
+       <div class="text-center"> <img class="logo" src="assets/images/A_logo_loginpage.jpg"></div>
+		<div class="or-seperator"></div>
+        <div class="form-group">
+        	<div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span> &nbsp;  &nbsp;
+                <input type="text" class="form-control" [(ngModel)]="email" name='email' placeholder="E-Mail" required="">
+            </div>
+        </div>
+		<div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span> &nbsp;  &nbsp;
+                <input type="password" class="form-control" [(ngModel)]="password" name='password' placeholder="Password" required="">
+            </div>
+        </div>   
+           
+       <div class="text-center">
+            <p *ngIf="displayError">{{displayError}}</p>
+            <button  class="btn btn-outline-success my-2 my-sm-0">SIGNIN</button>
+        </div>
+       
+        <div class="clearfix">
+            
+            <div class="hint-text small text-success">Don't have an account?&nbsp; | &nbsp; <a [routerLink]="['/registration']">Register Now!</a></div>
+        </div>  
+        
+    </form>
+    
+</div>

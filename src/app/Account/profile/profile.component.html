@@ -1,0 +1,21 @@
+
+<div class="form-group">
+    <h3>PROFILE</h3>
+<table style="width: 100%">
+    <tr>
+        <th>Operator Name</th>
+        <th>Operator Type</th>
+        <th>Operator EmailId</th>
+        <th>Operator Gender</th>
+    </tr>
+    <tr>
+        <td>{{operator.operatorName}}</td>
+        <td>{{operator.roles}}</td>
+        <td>{{operator.email}}</td>
+        <td>{{operator.gender}}</td>
+    </tr>
+</table>
+<br><br>
+<a *ngIf="Userauthenticate()" [routerLink]="['/orders']" ><h4>Your Order</h4></a>
+<a *ngIf="!Userauthenticate()" [routerLink]="['/registrationadmin']" ><h4>Admin DashBoard</h4></a>
+</div>

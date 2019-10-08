@@ -1,0 +1,25 @@
+
+.row { 
+    height:38px;
+    margin-top: 5px;
+    text-align: center;
+    width: 340px;
+    margin: 30px auto;
+  }
+   h3 {
+    text-align: center;
+    color: green;
+  } 
+  
+  .imagecart{
+    width: 80px;
+  }
+ 
+  .textbar{
+    width:300px;
+    margin: 5px;
+    height: 40px;
+  }
+
+  
+  

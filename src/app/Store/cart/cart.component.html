@@ -1,0 +1,41 @@
+<div class="form-group">
+  <div class="">
+
+    
+      <table style="width:100%">
+        <tr>
+          <th></th>
+          <th> Quantity</th>
+          <th> Name</th>
+          <th>Descrption</th>
+          <th>Price</th>
+          <th>TotalPriceof this Item</th>
+          <th></th>
+        </tr>        
+      <tr *ngFor="let c of carts">
+        <td><img class="imageofcart" src="{{c.productItems?.image}}"></td>
+        <td>
+              <button class="rounded-circle" title="Remove Product" class="btn btn-default" (click)="funcDel(c)"
+               [disabled]="c.quantitycart<1">➖</button>
+                {{c.quantitycart}} <button class="rounded-circle" title="Add Product" class="btn btn-default"
+                 (click)="funcAdd(c.productItemId)">➕</button></td>
+        <td> {{c.productItems?.productItemName}}</td>
+        <td>{{c.productItems?.description}}</td>
+        <td>{{c.productItems?.price}}</td>
+        <td> {{c.totalprice}}</td>
+        <td>     
+           <button class="btn btn-outline-success my-2 my-sm-0" (click)="funcClear(c)"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;REMOVE FROM CART</button>
+        </td>
+      </tr>   
+      
+    </table> 
+    
+  </div>
+</div>
+<div class="form-group">
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-success my-4 " [routerLink]="['/buy']"
+    *ngIf="carts.length>0">PLACE ORDER</button>
+  &nbsp;&nbsp;<button class="btn btn-success my-4 " [routerLink]="['']">Continuing Shopping</button>
+  <h4 *ngIf="totalPrice">Grand Total Price : {{totalPrice}}</h4>
+</div>

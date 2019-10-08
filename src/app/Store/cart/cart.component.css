@@ -1,0 +1,23 @@
+
+/* 
+.buybtn{
+  width: 100px;
+  margin: 30px ;
+  color: dimgray;
+ 
+} */
+/* .form-group {
+  width: 900px;
+  margin: 30px ;
+  color: gray;
+} */
+.imageofcart{
+  width: 100px;
+}
+.form-group{
+  text-align: center;
+}
+tr,th{
+  border:solid;
+}
+

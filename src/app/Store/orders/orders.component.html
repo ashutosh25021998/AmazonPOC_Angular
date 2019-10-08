@@ -1,0 +1,36 @@
+<h3>ORDER ITEMS!!</h3>
+<div class="form-group">
+        
+<table style="width: 100%">
+        <tr>
+                <th></th>
+                <th>ProductItemName</th>
+                <th>Descrption</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>TotalPriceof this Item</th>
+        </tr>
+        <tr *ngFor="let c of carts">
+                <td><img src="{{c.productItems?.image}}"></td>
+                 <td> {{c.productItems?.productItemName}}</td>
+                 <td>{{c.productItems?.description}}</td>
+                 <td>{{c.quantitycart}}</td>
+                 <td>{{c.productItems?.price}}</td>
+                 <td>{{c.totalprice}}</td>
+        </tr>
+</table>
+
+<div class="form-location">
+                    <h5>Delivery Location::</h5>
+                <div>
+                  
+                   Address:{{location.address}} &nbsp;&nbsp;&nbsp;&nbsp;
+                   State:{{location.state}} &nbsp;&nbsp;&nbsp;&nbsp;
+                   City:{{location.city}}&nbsp;&nbsp;&nbsp;&nbsp;
+                   Pin:{{location.pin}}&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+               </div>
+
+
+
+</div>

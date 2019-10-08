@@ -1,0 +1,32 @@
+
+<div class="form-group">
+    
+<form action="" (ngSubmit) ="updateProduct(f)" #f=ngForm>
+   <div>
+        <h2>Edit Productitem</h2>
+    ProductItemName:
+   {{products.productItemName}}  <br>
+   <input type="text" name="productItemName" placeholder="newproductItemName" [ngModel]="productItemName"><br>
+Quantity:
+   {{products.quantity}}<br>
+   <input type="text" name="quantity"  placeholder="newquantity"  [ngModel]="quantity"><br>
+  Price:
+   {{products.price}}<br>
+   <input type="text" name="price"  placeholder="newprice"  [ngModel]="price"><br>
+ProductId:
+   {{products.productId}}<br>
+   <input type="text" name="productId"  placeholder="newproductId"  [ngModel]="productId"><br>
+SupplierId:
+   {{products.supplierId}}<br>
+   <input type="text" name="supplierId"  placeholder="newsupplierId"  [ngModel]="supplierId"><br>
+Image:
+   {{products.image}}<br>
+   <input type="text" name="image"  placeholder="newimage"  [ngModel]="image"><br>
+Description:
+   {{products.description}}<br>
+   <input type="text" name="description"  placeholder="newdescription"  [ngModel]="description"><br>
+
+   </div>   
+    <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Update</button>
+</form>
+</div>

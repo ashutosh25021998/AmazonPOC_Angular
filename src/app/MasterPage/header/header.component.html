@@ -1,0 +1,33 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <a href=" "> <img  src="/assets/images/A_logo_header.jpg"></a>&nbsp;&nbsp;
+    <a class="navbar-brand" href=" ">AMSHOP</a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+     aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+
+
+    <div class="fontawasome">
+        <div class="container-fluid">
+        <div class="navbar-header">
+      <ul class="nav navbar-nav">    
+          <li class="nav-item">
+              <a *ngIf="!_user?.IsAuthenticate()" class="btn btn-success my-2 my-sm-0" [routerLink]="['/login']" (click)="signout()" routerLinkActive="router-link-active">Login</a>
+      </li>   
+                    
+        <li  class="nav-item">
+           <a *ngIf="profileauthenticate()" [routerLink]="['/profile']"><i class="fas fa-user fa-2x"></i></a>
+        </li>
+        <li  class="nav-item">
+              <a  *ngIf="cartauthenticate()" [routerLink]="['/cart']" routerLinkActive="router-link-active"><i class="fas fa-shopping-cart fa-2x"></i></a>
+        </li>
+        <li class="nav-item">
+                <a *ngIf="_user?.IsAuthenticate()" class="btn btn-success my-2 my-sm-0" [routerLink]="['/login']" (click)="signout()" routerLinkActive="router-link-active">Logout</a>
+        </li>
+      </ul>
+            </div>
+        </div>
+      </div>
+  </nav>
+ 

@@ -1,0 +1,14 @@
+.form-group{
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 15px;
+    background: #f1ebeb;
+    box-shadow: 8px 10px 10px rgba(0, 200, 133, 1);
+    padding: 40px;
+    border-radius: 10pc;
+}
+

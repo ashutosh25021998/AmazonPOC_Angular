@@ -1,0 +1,27 @@
+<h2>All Operator Details !</h2>
+<div>
+
+    <table  class="form-group">
+        <tr>
+        <th>Name</th>
+        <th>Email-Id</th>
+        <th>Roles</th>
+        <th>Gender</th>
+        <th></th>
+    </tr>
+    <tr  *ngFor="let operator of operators">
+        <h4><td>{{operator.operatorName}}</td></h4>
+        <td>{{operator.email}}</td>
+        <td>{{operator.roles}}</td>
+        <td>{{operator.gender}}</td>
+        <td>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+             (click)="ConfirmDelete(operator.operatorId)">Delete this operator</button>
+        </td>
+    </tr>
+    </table>
+
+<div>
+</div>
+
+</div>

@@ -1,0 +1,56 @@
+<h3>ORDER CONFORMATION TEMPLATE</h3>
+<div class="row">
+    
+        <form (ngSubmit)="AddLocation(f)" #f=ngForm>
+            <h4> Enter new your address:</h4>
+
+            <input class="textbar" type="text" name="address" [(ngModel)]="Address" placeholder="Address" required><br>
+            <input class="textbar" type="text" name="city" [(ngModel)]="City" placeholder="City" required><br>
+            <input class="textbar" type="text" name="state" [(ngModel)]="State" placeholder="State" required><br>
+            <input class="textbar" type="text" name="pin" [(ngModel)]="Pin" placeholder="Pin" required><br>
+            
+
+        <div class="form-check">
+            <h4> Pament Option::</h4>
+            <input type="radio" class="form-check-input" id="radio1" [(ngModel)]="deliveryMode" name="deliveryMode"
+                value="cashondelivery" >Cash On Delivery <br>
+            <input type="radio" class="form-check-input" id="radio2" [(ngModel)]="deliveryMode" name="deliveryMode"
+                value="OnlineBanking" >Online Banking<br>
+            <input type="radio" class="form-check-input" id="radio3" [(ngModel)]="deliveryMode" name="deliveryMode"
+                value="UPIId" >UPI Id<br>
+        </div>
+   
+
+        <h4>Order Summary:</h4>
+            <table >
+              <tr>
+                <th></th>
+                 <th> PRODUCT NAME:</th>
+                 <th> ITEM QUANTITY:</th>
+                 <th> ITEM PRICE:</th>
+              </tr>
+              <tr *ngFor="let c of carts">
+                 <td> <img class="imagecart" src="{{c.productItems?.image}}"></td>
+                 <td> {{c.productItems?.productItemName}}</td>
+                 <td>{{c.quantitycart}}</td>
+                 <td> {{c.productItems?.price}}</td>
+             </tr>
+            </table>
+
+        
+<!-- <p *ngIf="displayError">{{displayError}}</p> -->
+        <br>
+        Grand Total Price : {{totalPrice}}
+
+        <br>
+
+
+        
+            <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Confirm
+                Delivery</button><br><br>
+
+           
+
+    </form>
+    </div>
+

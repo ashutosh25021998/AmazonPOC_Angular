@@ -1,0 +1,16 @@
+h2{text-align: center;}
+.row{
+    margin-right: 50px;
+    margin-left: 50px;
+         
+}
+img{
+    border: solid;
+    margin-right:36px;
+    margin-left:36px;
+    width: 297px;
+    height: 342px;
+}
+img:hover{
+    transform: scale(0.5);
+}

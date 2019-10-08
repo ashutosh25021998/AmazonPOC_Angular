@@ -1,0 +1,33 @@
+
+<div class="signup-form">
+        <form (ngSubmit) ="addnewuser(f)" #f=ngForm>
+        <h2>Register</h2>
+        <div class="text-center"> <img src="assets/images/A_logo_loginpage.jpg"></div>
+		<p class="hint-text">Create your account.</p>
+     
+        <div class="form-group">
+        	<input type="text" class="form-control" [(ngModel)]="operatorName" name="operatorName" placeholder="Full Name" required>  
+            <input type="email" class="form-control" [(ngModel)]="email" name="email" placeholder="Email" required>
+            <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Password" required>        
+            <input type="password" class="form-control" [(ngModel)]="confirm_password" name="confirm_password" placeholder="Confirm Password" required>       
+           
+            <div class="form-check">
+              Gender:<br>
+              <input type="radio" class="form-check-input" id="radio1" [(ngModel)]="male" name="Gender" value="Male" > <span style="    margin-right: 27%;
+              ">Male</span>         
+              <input type="radio" class="form-check-input" id="radio2" [(ngModel)]="female" name="Gender" value="Female"><span>Female</span>                     
+              </div>
+             
+        </div> 
+
+        <p *ngIf="userregistererror">{{userregistererror}}</p>
+
+		<div class="form-group">
+            <button type="submit" [disabled]="passwordCheck(f)" class="btn btn-success btn-lg btn-block">Register Now</button>
+        </div>
+        <div class="form-group">Already have an account? <a [routerLink]="['/login']">Sign in</a></div>
+    </form>
+    
+    
+    
+</div>

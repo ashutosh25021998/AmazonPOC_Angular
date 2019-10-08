@@ -1,0 +1,23 @@
+.form-group{
+    width: 700px;
+    height: 230px;
+    margin: 50px auto;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 15px;
+    background: #f1ebeb;
+    box-shadow: 8px 10px 10px rgb(17, 19, 18);
+    padding: 40px;
+    border-radius: 165px;
+}
+h3{
+    color: green
+}
+
+
+/* .form-group .hint-text {
+    color: #777;
+    padding-bottom: 15px;
+    text-align: center;
+} */

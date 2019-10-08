@@ -1,0 +1,14 @@
+<br><br>
+<button *ngIf=" admincheck()" type="button" class="btn btn-success my-2 my-sm-0"
+ [routerLink]="['/create']" style="margin-left: 500px" >Add New Productitems</button>
+<br><br><br><br>
+<div class="row">
+<div *ngFor="let productitems of products" class="form-group">
+    <h2><img [routerLink]="['/details', productitems.productItemId]" 
+       src="{{productitems.image}}"><br>{{productitems.productItemName}}</h2>
+       
+  
+      
+  </div>
+</div>
+
